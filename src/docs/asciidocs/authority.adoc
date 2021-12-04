@@ -1,0 +1,2 @@
+== Auhority
+Este campo, apesar de não solicitado diretamente, é essencial para fazer o pedido no escopo de diferenciação ente gerente e scrum master e stater.

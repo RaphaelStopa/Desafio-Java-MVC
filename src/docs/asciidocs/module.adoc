@@ -1,0 +1,2 @@
+== Module
+Tínhamos que manter todas as entidades mas não seus atributos, mas não fazia sentido esta conter as entidades para Daily e Projeto, então foi retirado e colocado estas ligações nas outras classes.

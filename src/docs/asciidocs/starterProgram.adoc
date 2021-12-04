@@ -1,0 +1,2 @@
+== Starter Program
+Esta entidade está bem próxima ao escopo. Nas datas foi usado Date, apenas para ficar com o mostrado na semana de estudo.

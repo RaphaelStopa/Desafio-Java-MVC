@@ -1,0 +1,7 @@
+id;login;password_hash;first_name;last_name;four_letters;email;image_url;active
+1;admin;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Mariana;Carla;relp;admin@localhost;null;true
+2;scrum;$2a$10$7r.3y5Vd5NvWrTLT/oaAO.aFimLlHiDeHuToIGPO9wGOLHUK5oMee;Jessica;Tavares;kiuf;scrum@localhost;null;true
+3;starter 1;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Maria; Capelelario;uiOf;starter1@localhost;null;true
+4;starter 2;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Raphael;Mendes Stopa;picf;starter2@localhost;null;true
+5;starter 3;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Fabio;Andrade;ciIf;starter3@localhost;/img/starter1.jpg;true
+6;scrum 2;$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K;Felipe;Torres;aiIf;master_scrum_torres@localhost;null;true

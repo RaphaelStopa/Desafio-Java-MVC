@@ -1,0 +1,37 @@
+:doctype: book
+:backend: html5
+:page-layout!: docs
+:toc: left
+:toclevels: 4
+:icons: font
+:sectanchors:
+:sectlinks:
+:sectnums:
+:linkattrs:
+:source-highlighter: highlightjs
+
+:includedir: .
+
+
+= Documentation challenge by Raphael Mendes Stopa.
+
+include::{includedir}/overview.adoc[]
+
+include::{includedir}/employee.adoc[]
+
+include::{includedir}/authority.adoc[]
+
+include::{includedir}/starterProgram.adoc[]
+
+include::{includedir}/technology.adoc[]
+
+include::{includedir}/meeting.adoc[]
+
+include::{includedir}/module.adoc[]
+
+include::{includedir}/daily.adoc[]
+
+include::{includedir}/project.adoc[]
+
+include::{includedir}/others.adoc[]
+

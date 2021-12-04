@@ -1,0 +1,6 @@
+== Daily
+Segue o padrão. Foi só adicionado dois campos para fazer a ligação com o usuário e seu modulo.
+
+A data da daily é preenchida automaticamente pelo sistema.
+
+O Scrum Master só poderá ver as dailys destinadas a eles, já o Menager poderá ver todas obviamente.

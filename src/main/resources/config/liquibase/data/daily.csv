@@ -1,0 +1,5 @@
+id;module_id;date;done;employee_id;impediment;making;presence
+1;1;2021-11-21T22:43:08;Todo o CSS;3;Não Tem;Integração;true
+2;1;2021-11-22T22:43:08;;3;;;falso
+3;1;2021-11-23T22:43:08;Integração;3;Duvida na regra de negócios;Esta sem task;true
+4;2;2021-11-23T22:43:08;Estudo do caso;4;Anda vai estudar mais;A parte mobile;true

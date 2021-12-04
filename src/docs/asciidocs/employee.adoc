@@ -1,0 +1,9 @@
+== Employee
+
+Este campo é o equivalente ao Starter, mas ele também é usado para cadastro dos operadores do sistema. Optei por fazer desta forma para manter o escopo do projeto o mais parecido com o pedido. Normalmente, haveria algum tipo de separação e atributos para auditar esta entidade.
+
+=== Campos adicionados.
+Foram adicionados um campo único de login e um para o password, para poder fazer os Logins como solicitado. Caso o usuário seja um Starter este campos não são preenchidos e isto não causara problemas ao sistema.
+Foi colocado um campo para e-mail outro de referência para um http, que possa conter uma imagem (o jeito mais simples de um sistema ter a imagem do usuário). Foi feito um soft delete para os empregados e para isto foi acrescentado o campo active.
+
+Apenas Startes são listados.

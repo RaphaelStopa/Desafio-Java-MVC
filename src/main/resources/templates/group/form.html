@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" >
+
+<div layout:fragment="content">
+    <div class="container" style="margin-top: 40px;-webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15);
+box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15); padding-bottom: 12px; padding-top: 12px">
+    <div class="alert alert-primary" th:if="${message != null}"  th:text="${message}">
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <p style="color: #213f7f">Novo grupo</p>
+        </div>
+        <div class="card-body">
+            <form method="post" th:object="${group}" th:action="@{/group/edit}">
+                <input type="hidden" th:field="*{id}">
+                <div>Status:</div>
+                <div class="form-group mb-3">
+                    <select th:field="*{active}" class="form-select" aria-label="Default select example">
+                        <option th:value="true" th:text="Ativo"></option>
+                        <option th:value="false" th:text="Inativo"></option>
+                    </select>
+                </div>
+                                <div>Scrum Master:</div>
+                                <div class="form-group mb-3">
+                                    <select th:field="*{scrumMaster}" class="form-select" aria-label="Default select example" >
+                                        <option th:each="scrum : ${scrumMasters}" th:value="${scrum.id}" th:text="${scrum.firstName} + ' ' + ${scrum.lastName} + ' - ' +  ${scrum.fourLetters}">
+                                        </option>
+                                    </select>
+                                </div>
+
+                <div>Tecnologia:</div>
+                <div class="form-group mb-3">
+                    <select th:field="*{technology}" class="form-select" aria-label="Default select example">
+                        <option th:each="technology: ${technologies}" th:value="${technology.id}" th:text="${technology.name}">
+                        </option>
+                    </select>
+                </div>
+                                <div>Módulo:</div>
+                                <div class="form-group mb-3">
+                                    <select th:field="*{module}" class="form-select" aria-label="Default select example">
+                                        <option th:each="module: ${modules}" th:value="${module.id}" th:text="${module.name}">
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>Programa:</div>
+                                <div class="form-group mb-3">
+                                    <select th:field="*{startProgram}" class="form-select" aria-label="Default select example">
+                                        <option th:each="startProgram: ${programs}" th:value="${startProgram.id}" th:text="${startProgram.name}">
+                                        </option>
+                                    </select>
+                                </div>
+                <div style="margin-bottom: 18px">Starters atualmente ativos:</div>
+                <div class="form-check" style="margin: 10px" th:each="employee : ${employees}">
+                    <input class="form-check-input" type="checkbox" th:field="*{employees}" th:value="${employee.id}" id="flexCheckDefault" th:text="${employee.firstName} + ' ' + ${employee.lastName} + ' - ' + ${employee.fourLetters} " >
+                </div>
+                <button type="submit" class="btn" style="background-color: #213f7f; color: white; margin-top: 18px">Salvar Grupo</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</html>
+

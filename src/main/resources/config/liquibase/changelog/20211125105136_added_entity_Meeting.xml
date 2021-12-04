@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="30211122175156-1" author="stopa">
+        <createTable tableName="meeting">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="active" type="boolean" valueBoolean="false">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637f603821518-1">
+        <addColumn tableName="meeting">
+            <column name="scrum_master_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="163760f3821518-2">
+        <addColumn tableName="meeting">
+            <column name="technology_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+        <changeSet author="Stopa (generated)" id="1637606667563-1">
+            <addColumn tableName="meeting">
+                <column name="module_id" type="bigint"/>
+            </addColumn>
+        </changeSet>
+    <changeSet author="Stopa (generated)" id="1637612793609-1">
+        <addColumn tableName="meeting">
+            <column name="start_program_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637612793609-2">
+        <addForeignKeyConstraint baseColumnNames="start_program_id" baseTableName="meeting" constraintName="FK5yerlukxs4xoide40f9dpxvn6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="start_program" validate="true"/>
+    </changeSet>
+
+    <changeSet author="Stopa (generated)" id="1637g603821518-3">
+        <addForeignKeyConstraint baseColumnNames="scrum_master_id" baseTableName="meeting" constraintName="FK571r4os86a37j4ckic3j111np" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="employee" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="163760h3821518-4">
+        <addForeignKeyConstraint baseColumnNames="technology_id" baseTableName="meeting" constraintName="FKtkwkfek8cah0glbttoqbq29do" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="technology" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-7">
+        <addForeignKeyConstraint baseColumnNames="module_id" baseTableName="meeting" constraintName="FKmbahvps0rby3hbx18vb7j86q0" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="module" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637604414908-1">
+        <createTable tableName="meeting_employee">
+            <column name="employee_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="meeting_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637604414908-2">
+        <addForeignKeyConstraint baseColumnNames="meeting_id" baseTableName="meeting_employee" constraintName="FK9yraukvex666k050xjlvblqnb" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="meeting" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637604414908-3">
+        <addForeignKeyConstraint baseColumnNames="employee_id" baseTableName="meeting_employee" constraintName="FKtm6lflprn0l7s2epj3eqlyc21" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="employee" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

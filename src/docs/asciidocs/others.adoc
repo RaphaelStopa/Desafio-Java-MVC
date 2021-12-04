@@ -1,0 +1,2 @@
+== Others
+As outras tabelas no banco de dados são feitas automaticamente pelo liquibase para o controle das migrations.

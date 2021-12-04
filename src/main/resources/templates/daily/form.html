@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" >
+
+<div layout:fragment="content">
+    <div class="container" style="margin-top: 40px;-webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15);
+box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15); padding-bottom: 12px; padding-top: 12px">
+        <div class="alert alert-primary" th:if="${message != null}"  th:text="${message}">
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p style="color: #213f7f">Nova Daily</p>
+            </div>
+            <div class="card-body">
+                <form method="post" th:object="${daily}" th:action="@{/daily/edit}">
+                    <input type="hidden" th:field="*{id}">
+
+                    <div>Módulo:</div>
+                    <div class="form-group mb-3">
+                        <select th:field="*{module}" class="form-select" aria-label="Default select example">
+                            <option th:each="module: ${modules}" th:value="${module.id}" th:text="${module.name}">
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label th:for="done">Fez:</label>
+                        <input class="form-control" type="text" th:field="*{done}">
+                        <div class="text-danger" th:if="${#fields.hasErrors('done')}" th:errors="*{done}"></div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label th:for="making">Esta fazendo:</label>
+                        <input class="form-control" type="text" th:field="*{making}">
+                        <div class="text-danger" th:if="${#fields.hasErrors('making')}" th:errors="*{making}"></div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label th:for="impediment">Impedimento:</label>
+                        <input class="form-control" type="text" th:field="*{impediment}">
+                        <div class="text-danger" th:if="${#fields.hasErrors('impediment')}" th:errors="*{impediment}"></div>
+                    </div>
+
+                    <div>Status:</div>
+                    <div class="form-group mb-3">
+                        <select th:field="*{presence}" class="form-select" aria-label="Default select example">
+                            <option th:value="true" th:text="Presente"></option>
+                            <option th:value="false" th:text="Faltou"></option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 18px">Selecione o Starter relativo a esta daily:</div>
+                    <div class="form-check" style="margin: 10px" th:each="employee : ${employees}">
+                        <input class="form-check-input" type="radio" th:field="*{employee}" th:value="${employee.id}" id="flexCheckDefault" th:text="${employee.firstName} + ' ' + ${employee.lastName} + ' - ' +  ${employee.fourLetters}" >
+                    </div>
+                    <button type="submit" class="btn" style="background-color: #213f7f; color: white; margin-top: 18px">Salvar Daily</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

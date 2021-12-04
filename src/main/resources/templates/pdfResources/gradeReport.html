@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<div style="font-size: 22px">Relatório de notas dos Startes GFT</div>
+<div style="background-color: #f1f5fd; padding: 20px" th:if="${#lists.isEmpty(lowestGrades)}">Não existem notas cadastradas.</div>
+<div style="background-color: #f1f5fd; padding: 20px" th:if="${not #lists.isEmpty(lowestGrades)}">
+    <div style="font-size: 20px">Estas são as 5 <b>melhores notas</b>:</div>
+    <table  style="border: 1px solid black; width: 100%">
+        <thead>
+        <tr style="border-collapse: collapse;">
+            <th>Módulo</th>
+            <th>Starter</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="project : ${lowestGrades}">
+            <td th:text="${project.module.name}"></td>
+            <td th:text="${project.employee.firstName} + ' ' + ${project.employee.lastName} + ' - ' +  ${project.employee.fourLetters}"></td>
+            <td th:text="${project.evaluation}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="background-color: #fdf1f1; padding: 20px" th:if="${not #lists.isEmpty(lowestGrades)}">
+    <div style="font-size: 20px">Estas são as 5 <b>piores notas</b>:</div>
+    <table  style="border: 1px solid black; width: 100%">
+        <thead>
+        <tr style="border-collapse: collapse;">
+            <th>Módulo</th>
+            <th>Starter</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="project : ${highestGrades}">
+            <td th:text="${project.module.name}"></td>
+            <td th:text="${project.employee.firstName} + ' ' + ${project.employee.lastName} + ' - ' +  ${project.employee.fourLetters}"></td>
+            <td th:text="${project.evaluation}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:text="'Pdf emitido na hora técnica de: ' + ${date} ">Pdf emitido: </div>
+</body>
+</html>

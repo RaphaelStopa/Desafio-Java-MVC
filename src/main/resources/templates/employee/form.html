@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" >
+
+<div layout:fragment="content">
+    <div class="container" style="margin-top: 40px;-webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15);
+box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15); padding-bottom: 12px; padding-top: 12px">
+    <div class="alert alert-primary" th:if="${message != null}"  th:text="${message}">
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <p style="color: #213f7f">Novo Starter</p>
+        </div>
+        <div class="card-body">
+            <form method="post" th:object="${employee}" th:action="@{/employee/edit}"  enctype="multipart/form-data">
+                <input type="hidden" th:field="*{id}">
+                <div class="form-group mb-3">
+                    <label th:for="fistName">Nome:</label>
+                    <input class="form-control" type="text" th:field="*{firstName}" required>
+                    <div class="text-danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+                </div>
+                <div class="form-group mb-3">
+                    <label th:for="lastName">Sobrenome:</label>
+                    <input class="form-control" type="text" th:field="*{lastName}" required>
+                    <div class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+                </div>
+                <div class="form-group mb-3">
+                    <label th:for="nome">Quatro letras:</label>
+                    <input class="form-control" type="text" maxlength="4" th:field="*{fourLetters}" required>
+                    <div class="text-danger" th:if="${#fields.hasErrors('fourLetters')}" th:errors="*{fourLetters}"></div>
+                </div>
+                <div class="form-group mb-3">
+                    <label th:for="nome">Email:</label>
+                    <input class="form-control" type="email" th:field="*{email}" required>
+                    <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Uma foto do Starter. Apenas png e jpg, por favor:</label>
+                    <div>
+                        <input type="file" name="imageFile">
+                    </div>
+                </div>
+                <button type="submit" class="btn" style="background-color: #213f7f;color: white">Salvar Desenvolvedor</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
+</html>

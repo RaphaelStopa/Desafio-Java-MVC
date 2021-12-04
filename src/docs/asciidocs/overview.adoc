@@ -1,0 +1,11 @@
+[[overview]]
+= Overview
+
+ Esta documentação está separada por entidades, e serve para apoiar o avaliador do projeto quanto as decisões tomadas pelo programador criador.
+ Importante ressaltar que a imagens são da própria GFT ou feitas pelo autor. Outro ponto importante a já se ressaltar, é que por opção não foi utilizada as quatro letras como uma forma de identificação direta do usuário. Optou-se por um Id e e-mail. Desconheço a regra de negócio destas quatros letras (se é só nacional por exemplo), e optei por usar parâmetros mais "estáveis".
+Como é obrigatório poder deletar TODAS as entidades, optei algumas vezes em fazer um soft delete para manter a integridade dos dados.
+
+[[overview-general]]
+== General
+
+

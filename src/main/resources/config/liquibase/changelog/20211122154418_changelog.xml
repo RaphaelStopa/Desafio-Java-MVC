@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="Stopa (generated)" id="1637606667563-2">
+        <addColumn tableName="daily">
+            <column name="module_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-3">
+        <addColumn tableName="project">
+            <column name="module_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-4">
+        <addColumn tableName="project">
+            <column name="employee_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-5">
+        <addForeignKeyConstraint baseColumnNames="module_id" baseTableName="project" constraintName="FK9hdj2pbvxbkk3igkftjjvrccm" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="module" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-6">
+        <addForeignKeyConstraint baseColumnNames="module_id" baseTableName="daily" constraintName="FKijbafncdri9i9x397yxarct6j" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="module" validate="true"/>
+    </changeSet>
+    <changeSet author="Stopa (generated)" id="1637606667563-8">
+        <addForeignKeyConstraint baseColumnNames="employee_id" baseTableName="project" constraintName="FKmbahvps0rby3hbx18vb7j86q1" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="employee" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

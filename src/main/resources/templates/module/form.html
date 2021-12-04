@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" >
+
+<div layout:fragment="content">
+    <div class="container" style="margin-top: 40px;-webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15);
+box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.15); padding-bottom: 12px; padding-top: 12px">
+    <div class="alert alert-primary" th:if="${message != null}"  th:text="${message}">
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <p style="color: #213f7f">Novo módulo</p>
+            <p style="color: #213f7f">Dica: Use nomes genéricos se achar necessário. Você poderá usar um mesmo módulo em mais de um programa. Ambos são associados ao starters. </p>
+        </div>
+        <div class="card-body">
+            <form method="post" th:object="${module}" th:action="@{/module/edit}">
+                <input type="hidden" th:field="*{id}">
+                <div class="form-group mb-3">
+                    <label th:for="name">Nome:</label>
+                    <input class="form-control" type="text" th:field="*{name}" required>
+                    <div class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                </div>
+                <button type="submit" class="btn" style="background-color: #213f7f;color: white">Salvar módulo</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</html>

@@ -1,0 +1,2 @@
+== Meeting
+Este é o equivalente a tabela Grupo. Como estou programando em inglês, optei por não usar o nome group, ainda mais sozinho. Na compilação não teria erro, mas o JPA ia se perder ai tentar montar as querys. Foi adicionado 3 campos para fazer a ligação dos grupos com um programa e com modulo especifico, alem de um campo para o soft delete.

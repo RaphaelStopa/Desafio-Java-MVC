@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20211122173026-1" author="Stopa">
+        <loadData
+                file="config/liquibase/data/start_program.csv"
+                separator=";"
+                tableName="start_program"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+    <changeSet id="20211122173026-2" author="Stopa">
+        <loadData
+                file="config/liquibase/data/technology.csv"
+                separator=";"
+                tableName="technology"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+    <changeSet id="20211122173026-3" author="Stopa">
+        <loadData
+                file="config/liquibase/data/module.csv"
+                separator=";"
+                tableName="module"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+    <changeSet id="20211122173026-4" author="Stopa">
+        <loadData
+                file="config/liquibase/data/meeting.csv"
+                separator=";"
+                tableName="meeting"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+    <changeSet id="20211122173026-5" author="Stopa">
+        <loadData
+                file="config/liquibase/data/project.csv"
+                separator=";"
+                tableName="project"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+    <changeSet id="20211122173026-6" author="Stopa">
+        <loadData
+                file="config/liquibase/data/meeting_employee.csv"
+                separator=";"
+                tableName="meeting_employee"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+
+    <changeSet id="20211122173026-7" author="Stopa">
+        <loadData
+                file="config/liquibase/data/daily.csv"
+                separator=";"
+                tableName="daily"
+                usePreparedStatements="true">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

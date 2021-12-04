@@ -1,0 +1,2 @@
+== Technology
+Segue o padrão do solicitado. O campo destinado ao nome foi feito com um enum, já que a atividade da para entender que so teria duas opções já pré-determinadas.
