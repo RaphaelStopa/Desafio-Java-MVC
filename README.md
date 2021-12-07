@@ -16,7 +16,7 @@ Na primeira inicialização, pode demorar um pouco. Por favor, seja paciente. De
 Projeto com o Spring Security. Para poder logar use:
 
 ```
-Para o gereciador user:
+Para o gerenciador use:
 UserName: admin
 Password: admin
 
@@ -30,7 +30,7 @@ Estes dados estarão automaticamente no banco de dados graças ao liquibase.
 Veja o projeto sendo inicializado aqui: https://youtu.be/dXa9FNnM1Mk
 
 ## Documentação
-Possui duvidas da em relação a minha abordagem quanto a este projeto? Para isto, gerei uma documentação com Ascii que se encontra dentro das pastas do projeto.
+Possui duvidas em relação a minha abordagem quanto a este projeto? Para isto, gerei uma documentação com Ascii que se encontra dentro das pastas do projeto.
 ```
 src/docs/asciidocs
 ```
