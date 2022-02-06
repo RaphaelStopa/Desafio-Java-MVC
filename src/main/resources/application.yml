@@ -1,8 +1,5 @@
 spring:
   devtools:
-    restart:
-      enabled: false
-      additional-exclude: static/**
     livereload:
       enabled: false
     jackson:
